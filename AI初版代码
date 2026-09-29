@@ -1,0 +1,7 @@
+import csv
+with open("data/生词表.csv") as f:
+    reader = csv.DictReader(f)
+    words = list(reader)
+hsk4 = [w for w in words if w["HSK等级"]=="4"]
+for w in hsk4:
+    print(w["词汇"])
